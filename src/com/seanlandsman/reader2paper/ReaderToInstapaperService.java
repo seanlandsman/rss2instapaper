@@ -24,7 +24,7 @@ public class ReaderToInstapaperService {
 
     public void processRssFeedsAndSendToInstapaper() throws IOException, SAXException, XPathExpressionException, ParserConfigurationException {
         log.info("about to processRssFeedsAndSendToInstapaper");
-        Map<String, String> unreadItems = googleReader.getUnreadItems(Config.getInstance().getInteger(Config.READER_STREAMS_TO_MONITOR));
+        Map<String, String> unreadItems = googleReader.getUnreadItems(Config.getInstance().getInteger(Config.READER_MAX_UNREAD_ITEMS));
         for (String idTag : unreadItems.keySet()) {
             log.info("Found idTag: " + idTag);
             instapaperService.addItemToInstapaper(unreadItems.get(idTag));
