@@ -1,6 +1,7 @@
 package com.seanlandsman.instapaper;
 
-import com.seanlandsman.reader.Config;
+import com.seanlandsman.config.Config;
+import com.seanlandsman.config.ConfigurationConstants;
 import com.seanlandsman.utils.IOUtils;
 
 import java.io.IOException;
@@ -17,13 +18,13 @@ public class InstapaperService {
     /**
      * sends the specified url to instapaper
      *
-     * @param url
+     * @param url the url to add
      * @throws java.io.IOException
      */
     public void addItemToInstapaper(String url) throws IOException {
         String addUrl = String.format(BASE_INSTAPAPER_ADD_URL,
-                Config.getInstance().get(Config.INSTAPAPER_EMAIL),
-                Config.getInstance().get(Config.INSTAPAPER_PASSWORD),
+                Config.getInstance().get(ConfigurationConstants.INSTAPAPER_EMAIL),
+                Config.getInstance().get(ConfigurationConstants.INSTAPAPER_PASSWORD),
                 url);
         log.info("Result of adding to instapaper:" + openConnectionAndReturnOutput(addUrl));
     }

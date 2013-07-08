@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="rome">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jdom-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rome-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xercesImpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xml-apis.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
